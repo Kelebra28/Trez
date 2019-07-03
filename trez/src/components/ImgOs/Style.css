@@ -1,0 +1,30 @@
+.seccionIzq {
+    /* border: solid 1px red; */
+    width: 20%;
+}
+
+@keyframes ltr{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(xx) translateX(0);
+        opacity: 1;
+        }
+}
+
+.seccionIzq{
+    animation: ltr 1s forwards 0s ease;
+}
+.contenedorFotoIzq {
+    /* border: solid 1px greenyellow; */
+    width: 100%;
+    margin-top: 4em;
+}
+
+.contenedorFotoIzq img {
+    /* border: solid 1px purple; */
+    width: 100%;
+    height: 15em;
+}
