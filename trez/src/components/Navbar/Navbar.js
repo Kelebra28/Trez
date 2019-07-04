@@ -19,13 +19,13 @@ const Navbar = () => {
                 </div>
                 <section className="nav-links">
                     <article className="linksPrincipales">
-                        <a href="">Nosotros</a>
-                        <a href="">Socias</a>
-                        <a href="/servicios">Servicios</a>
-                        <a href="">Industrias</a>
-                        <a href="">Presencia</a>
-                        <a href="">Recursos</a>
-                        <a href="">Contacto</a>
+                        <a href="/Nosotros">Nosotros</a>
+                        <a href="/Socias">Socias</a>
+                        <a href="/Servicios">Servicios</a>
+                        <a href="/Industrias">Industrias</a>
+                        <a href="/Presencia">Presencia</a>
+                        <a href="/Recuros">Recursos</a>
+                        <a href="/Contacto">Contacto</a>
                     </article>
                 </section>
                 <section className="buscarylinks">

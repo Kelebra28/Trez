@@ -13,7 +13,7 @@ import Nosotros from './Pages/Nosotros'
 //socias
 import Socias from './Pages/Socias/Socias';
 import SociasLert from './Pages/Socias/SociasLER';
-import  SociasIEMS from './Pages/Socias/SociasIEMS';
+import SociasIEMS from './Pages/Socias/SociasIEMS';
 //Profecionales
 import Profecionales from './Pages/Profecionales/ProfeIEMS';
 import ProfeLERT from './Pages/Profecionales/ProfeLERT';
@@ -79,9 +79,9 @@ import Otros from './Pages/Recursos/Otros';
 import Recursos from './Pages/Recursos/Recursos';
 //Contacto
 import Contacto from './Pages/Contacto';
-
-
-
+//Lang
+import Esp from './Lang/Esp.json'
+import Eng from './Lang/Eng.json'
 
 
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -91,7 +91,36 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 library.add(fab)
 
 
+
+const dataEsp = Esp
+const dataEng = Eng
+
+
+
 class App extends Component {
+
+
+  state = {
+    data: dataEsp,
+    idioma: "Esp"
+  }
+
+  handelChangeIdioma = () => {
+    this.state.idioma === "Esp" ?
+    this.setState({
+      data:dataEng,
+      idioma:"Eng"
+    }
+    )
+    :
+    this.setState({
+      data:dataEsp,
+      idioma:"Esp"
+    }
+    )
+  }
+
+
   render() {
     return (
       <Router>
@@ -143,7 +172,7 @@ class App extends Component {
               <Route exact path="/EconomiaLitigios/Calculo-Subvenciones" component={() => <Calculo data={this.state.data} />}/>
               <Route exact path="/EconomiaLitigios/Verificaciones" component={() => <VerificacionesE data={this.state.data} />}/>
               {/* Monitoreo Estrategico */}
-              <Route exact path="/MonitoreoEstrategico/" component={() => <Monitoreos data={this.state.data} />}/>
+              <Route exact path="/MonitoreoEstrategico/" component={() => <Monitoreo data={this.state.data} />}/>
               <Route exact path="/MonitoreoEstrategico/Monitoreo-Precios" component={() => <Precios data={this.state.data} />}/>
               <Route exact path="/MonitoreoEstrategico/Alertas-Dumping" component={() => <Alertas data={this.state.data} />}/>
               {/* Mx-USA Trade Planning */}
